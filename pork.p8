@@ -1,58 +1,7 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
-function _init()
- _upd=update_game
- _drw=draw_game
- startgame()
- 
-end
-
-
-function _update()
-	_upd()
-end
-
-
-function _draw()
-	_drw()
-end
-
-function startgame()
- p_x=2
- p_y=6
-end
--->8
---updates
-
-function update_game()
-	if btnp(⬅️) then p_x-= 1 end
-	if btnp(➡️) then p_x+= 1 end
-	if btnp(⬆️) then p_y-= 1 end
-	if btnp(⬇️) then p_y+= 1 end
-	
-end
-
-function update_gameover()
-
-end
--->8
---draws
-
-function draw_game()
- cls(0)
- map()
-	
-	palt(0,false)
-	pal(6,10)
-	spr(240,p_x*8,p_y*8)
-	pal()
-
-end
-
-function draw_gameover()
-
-end
+#include pork04.p8
 __gfx__
 0000000000000000606660600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000055555550
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0aa000000000000
